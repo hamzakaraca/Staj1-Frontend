@@ -1,0 +1,9 @@
+<ul class="list-group">
+  <li (click)="clearCurrentWorker" [class]="getAllWorkerClass()" routerLink="">Tüm Planlar</li>
+  <li (click)="setCurrentWorker(worker)"
+  routerLink="/works/worker/{{worker.workerId}}" 
+  *ngFor="let worker of workers" 
+  [class]="getCurrentWorkerClass(worker)">
+  {{worker.firstName +" "+ worker.lastName}}</li>
+  
+</ul>

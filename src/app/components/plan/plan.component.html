@@ -1,0 +1,25 @@
+<div *ngIf="dataLoaded==false" class="spinner-border text-info" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
+
+<table *ngIf="dataLoaded==true" class="table">
+ <thead>
+        <tr>
+            <th>Id</th>
+            <th>İş Id</th>
+            <th>Çalışan Id</th>
+            <th>Direktif</th>
+        </tr>
+ </thead>
+ <tbody>
+        <tr *ngFor="let plan of plans">
+            <td>{{plan.planId}}</td>
+            <td>{{plan.workId}}</td>
+            <td>{{plan.workerId}}</td>
+            <td>{{plan.direction}}</td>
+            <td><button (click)="planDetailListedInfo()" routerLink="/plandetails/plan/{{plan.planId}}" class="btn btn-danger">Plan detayları</button></td>
+        </tr>
+ </tbody>
+    
+    
+</table>

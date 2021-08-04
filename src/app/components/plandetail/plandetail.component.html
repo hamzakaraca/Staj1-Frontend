@@ -1,0 +1,22 @@
+<div *ngIf="dataLoaded==false" class="spinner-border text-info" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
+<table *ngIf="dataLoaded==true" class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>İş Adı</th>
+            <th>Çalışan Adı</th>
+            <th>Bitiş tarihi</th>
+            <th>İlerleme Durumu</th>
+        </tr>
+    </thead>
+    <tr >
+        <td>{{planDetail.planId}}</td>
+        <td>{{planDetail.workName}}</td>
+        <td>{{planDetail.workerName}}</td>
+        <td>{{planDetail.finalDate}}</td>
+        <td>{{planDetail.progressStatus}}</td>
+    </tr>
+    
+</table>

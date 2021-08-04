@@ -1,0 +1,37 @@
+<div class="content">
+    <div class="col-md-12">
+        <div class="card" >
+            <div class="card-header" ><h5 class="title" >Plan ekle</h5></div>
+            <div class="card-body" >
+                <form [formGroup]="planAddForm">
+                    <div class="mb-3">
+                        <label for="workId">İş numarası</label>
+                    <div class="form-group" >
+                        <input type="number" id="workId" formControlName="workId" class="form-control" placeholder="İş Numarası Giriniz" />
+                    </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="workerId">Çalışan numarası</label>
+                    <div class="form-group" >
+                        <input type="number" id="workerId" formControlName="workerId" class="form-control" placeholder="Çalışan Numarası Giriniz" />
+                    </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="direction">Direktif</label>
+                    <div class="form-group" >
+                        <input type="text" id="direction" formControlName="direction" class="form-control" placeholder="Direktiflerinizi Giriniz" />
+                    </div>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-danger" (click)="add()">Ekle</button>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
