@@ -19,7 +19,7 @@ export class WorkAddComponent implements OnInit {
 
   createWorkAddForm(){
     this.workAddForm=this.formBuilder.group({
-      workerId:["",Validators.min(1)],
+      workerId:["",Validators.min(1)], 
       workName:["",],
       progressStatus:["",],
       finalDate:["",]
