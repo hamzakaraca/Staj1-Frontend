@@ -21,4 +21,12 @@ export class WorkerService {
     let newPath = this.apiUrl+"workers/add"
     return this.httpClient.post<ResponseModel>(newPath,worker)
   }
+  updateWorker(worker:Worker):Observable<ResponseModel>{
+    let newPath=this.apiUrl+"workers/update"
+    return this.httpClient.post<ResponseModel>(newPath,worker)
+  }
+  deleteWorker(worker:Worker):Observable<ResponseModel>{
+    let newPath=this.apiUrl+"workers/delete"
+    return this.httpClient.post<ResponseModel>(newPath,worker)
+  }
 }

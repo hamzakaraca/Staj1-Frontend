@@ -17,6 +17,12 @@ import { ToastrModule } from 'ngx-toastr';
 import { PlanAddComponent } from './components/plan-add/plan-add.component';
 import { WorkAddComponent } from './components/work-add/work-add.component';
 import { WorkerAddComponent } from './components/worker-add/worker-add.component';
+import { WorkUpdateComponent } from './components/work-update/work-update.component';
+import { WorkerUpdateComponent } from './components/worker-update/worker-update.component';
+import { WorkerDeleteComponent } from './components/worker-delete/worker-delete.component';
+import { WorkDeleteComponent } from './components/work-delete/work-delete.component';
+import { PlanUpdateComponent } from './components/plan-update/plan-update.component';
+import { PlanDeleteComponent } from './components/plan-delete/plan-delete.component';
 
 
 
@@ -32,7 +38,13 @@ import { WorkerAddComponent } from './components/worker-add/worker-add.component
     VatAddedPipe,
     PlanAddComponent,
     WorkAddComponent,
-    WorkerAddComponent
+    WorkerAddComponent,
+    WorkUpdateComponent,
+    WorkerUpdateComponent,
+    WorkerDeleteComponent,
+    WorkDeleteComponent,
+    PlanUpdateComponent,
+    PlanDeleteComponent
     
   ],
   imports: [

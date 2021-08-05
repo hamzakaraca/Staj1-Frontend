@@ -4,8 +4,12 @@ import { PlanAddComponent } from './components/plan-add/plan-add.component';
 import { PlanComponent } from './components/plan/plan.component';
 import { PlandetailComponent } from './components/plandetail/plandetail.component';
 import { WorkAddComponent } from './components/work-add/work-add.component';
+import { WorkDeleteComponent } from './components/work-delete/work-delete.component';
+import { WorkUpdateComponent } from './components/work-update/work-update.component';
 import { WorkComponent } from './components/work/work.component';
 import { WorkerAddComponent } from './components/worker-add/worker-add.component';
+import { WorkerDeleteComponent } from './components/worker-delete/worker-delete.component';
+import { WorkerUpdateComponent } from './components/worker-update/worker-update.component';
 
 const routes: Routes = [
   {path:"",pathMatch:"full",component:PlanComponent},
@@ -15,7 +19,12 @@ const routes: Routes = [
   {path:"plandetails/plan/:planId",component:PlandetailComponent},
   {path:"plans/add",component:PlanAddComponent},
   {path:"workers/add",component:WorkerAddComponent},
-  {path:"works/add",component:WorkAddComponent}
+  {path:"workers/update",component:WorkerUpdateComponent},
+  {path:"workers/delete",component:WorkerDeleteComponent},
+  {path:"works/add",component:WorkAddComponent},
+  {path:"works/update",component:WorkUpdateComponent},
+  {path:"works/delete",component:WorkDeleteComponent}
+  
 ];
 
 @NgModule({
