@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { PlanAddComponent } from './components/plan-add/plan-add.component';
+import { PlanDeleteComponent } from './components/plan-delete/plan-delete.component';
+import { PlanUpdateComponent } from './components/plan-update/plan-update.component';
 import { PlanComponent } from './components/plan/plan.component';
 import { PlandetailComponent } from './components/plandetail/plandetail.component';
 import { WorkAddComponent } from './components/work-add/work-add.component';
@@ -18,12 +21,15 @@ const routes: Routes = [
   {path:"plandetail",component:PlandetailComponent},
   {path:"plandetails/plan/:planId",component:PlandetailComponent},
   {path:"plans/add",component:PlanAddComponent},
+  {path:"plans/delete",component:PlanDeleteComponent},
+  {path:"plans/update",component:PlanUpdateComponent},
   {path:"workers/add",component:WorkerAddComponent},
   {path:"workers/update",component:WorkerUpdateComponent},
   {path:"workers/delete",component:WorkerDeleteComponent},
   {path:"works/add",component:WorkAddComponent},
   {path:"works/update",component:WorkUpdateComponent},
   {path:"works/delete",component:WorkDeleteComponent}
+
   
 ];
 

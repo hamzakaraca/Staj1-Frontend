@@ -20,16 +20,29 @@ export class PlanService {
     let newPath=this.apiUrl+"plans/getall"
     return this.httpClient.get<ListResponseModel<Plan>>(newPath);
   }
+
   getPlansDetail():Observable<ListResponseModel<PlanDetailDto>>{
     let newPath=this.apiUrl+"plans/getplansdetail"
     return this.httpClient.get<ListResponseModel<PlanDetailDto>>(newPath);
   }
+
   getPlanDetail(planId:number):Observable<SingleResponseModel<PlanDetailDto>>{
     let newPath=this.apiUrl+"plans/getplandetail?planId="+planId
     return this.httpClient.get<SingleResponseModel<PlanDetailDto>>(newPath);
   }
+
   add(plan:Plan):Observable<ResponseModel>{
     let newPath=this.apiUrl+"plans/add"
+    return this.httpClient.post<ResponseModel>(newPath,plan)
+  }
+
+  updatePlan(plan:Plan):Observable<ResponseModel>{
+    let newPath=this.apiUrl+"plans/update"
+    return this.httpClient.post<ResponseModel>(newPath,plan)
+  }
+
+  deletePlan(plan:Plan):Observable<ResponseModel>{
+    let newPath=this.apiUrl+"plans/delete"
     return this.httpClient.post<ResponseModel>(newPath,plan)
   }
 }

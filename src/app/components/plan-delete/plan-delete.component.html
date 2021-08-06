@@ -1,1 +1,30 @@
-<p>plan-delete works!</p>
+<div class="content">
+    <div class="col-md-12">
+        <div class="card" >
+            <div class="card-header" ><h5 class="title" >Plan Sil</h5></div>
+            <div class="card-body" >
+                <form [formGroup]="planDeleteForm">
+                    <div class="mb-3">
+                        <label for="planId">Plan numarası</label>
+                    <div class="form-group" >
+                        <input type="number" id="planId" formControlName="planId" class="form-control" placeholder="Silmek İstediğiniz Plan Numarasını Giriniz" />
+                    </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="direction">Direktif</label>
+                    <div class="form-group" >
+                        <input type="text" id="direction" formControlName="direction" class="form-control" placeholder="Silmek İstediğiniz Direktif Adını Giriniz" />
+                    </div>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-danger" (click)="deletePlan()">Sil</button>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>

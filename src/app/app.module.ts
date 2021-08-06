@@ -44,8 +44,7 @@ import { PlanDeleteComponent } from './components/plan-delete/plan-delete.compon
     WorkerDeleteComponent,
     WorkDeleteComponent,
     PlanUpdateComponent,
-    PlanDeleteComponent
-    
+    PlanDeleteComponent 
   ],
   imports: [
     BrowserModule,
