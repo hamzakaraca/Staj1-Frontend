@@ -6,25 +6,44 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              İşlemler
+              Plan İşlemleri
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Plan İşlemleri</a></li>
-              <li><a class="dropdown-item" href="#">Çalışan İşlemleri</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">İŞ İşlemleri</a></li>
+              <li><a class="dropdown-item" href="#" routerLink="plans/add">Plan Ekle</a></li>
+              <li><a class="dropdown-item" href="#" routerLink="plans/update">Plan Güncelle</a></li>
+              <li><a class="dropdown-item" href="#" routerLink="plans/delete">Plan Sil</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Çalışan İşlemleri
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#" routerLink="workers/add">Çalışan Ekle</a></li>
+              <li><a class="dropdown-item" href="#" routerLink="workers/update">Çalışan Güncelle</a></li>
+              <li><a class="dropdown-item" href="#" routerLink="workers/delete">Çalışan Sil</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              İş İşlemleri
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#" routerLink="works/add">İş Ekle</a></li>
+              <li><a class="dropdown-item" href="#" routerLink="works/update">İş Güncelle</a></li>
+              <li><a class="dropdown-item" href="#" routerLink="works/delete">İş Sil</a></li>
             </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+
+          <li class="nav-item">
+            <button routerLink="login" class="btn btn-outline-success">Giriş</button>
           </li>
         </ul>
         <form class="d-flex">

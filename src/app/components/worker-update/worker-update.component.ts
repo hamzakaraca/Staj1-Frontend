@@ -28,7 +28,7 @@ export class WorkerUpdateComponent implements OnInit {
     if (this.workerUpdateForm.valid) {
       let workerModel=Object.assign({},this.workerUpdateForm.value)
       this.workerService.updateWorker(workerModel).subscribe(response=>{
-        this.toastrService.success("Çalışan başarıyla büncellendi","Güncelleme")
+        this.toastrService.success("Çalışan başarıyla güncellendi","Güncelleme")
       },responseError=>{
         if (responseError.error.Errors.length>0) {
           for (let i = 0; i < responseError.error.Errors.lenth; i++) {

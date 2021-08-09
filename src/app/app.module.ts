@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
@@ -23,6 +23,9 @@ import { WorkerDeleteComponent } from './components/worker-delete/worker-delete.
 import { WorkDeleteComponent } from './components/work-delete/work-delete.component';
 import { PlanUpdateComponent } from './components/plan-update/plan-update.component';
 import { PlanDeleteComponent } from './components/plan-delete/plan-delete.component';
+import { LoginComponent } from './components/login/login.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { RegisterComponent } from './components/register/register.component';
 
 
 
@@ -44,7 +47,9 @@ import { PlanDeleteComponent } from './components/plan-delete/plan-delete.compon
     WorkerDeleteComponent,
     WorkDeleteComponent,
     PlanUpdateComponent,
-    PlanDeleteComponent 
+    PlanDeleteComponent,
+    LoginComponent,
+    RegisterComponent 
   ],
   imports: [
     BrowserModule,
@@ -57,7 +62,9 @@ import { PlanDeleteComponent } from './components/plan-delete/plan-delete.compon
     }),
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
